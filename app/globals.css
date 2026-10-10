@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{--bg:#F6F7FC;--surface:#fff;--ink:#0F1530;--muted:#555D7E;--line:#DDE1F0;--accent:#5B4BFF;--accent-ink:#fff;--ok:#0F8A63}
+.dark{--bg:#0B1024;--surface:#131A38;--ink:#EAEDFB;--muted:#9BA4CC;--line:#252E5A;--accent:#8B7DFF;--accent-ink:#0B1024;--ok:#4FD1A5}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{background:var(--bg);color:var(--ink)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@layer components{
+  .btn{@apply inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold border-2 border-accent transition-colors}
+  .btn-p{@apply bg-accent text-accent-ink hover:opacity-90}
+  .btn-s{@apply text-accent hover:bg-accent hover:text-accent-ink}
+  .chip{@apply inline-flex items-center rounded-full border border-line bg-surface px-3 py-1 text-sm}
+  .section{@apply border-t border-line py-20}
+}
